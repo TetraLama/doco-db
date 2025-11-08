@@ -7,8 +7,8 @@
 #     #  target: ""  # Optional: use to target a specific deployment config file, e.g., "test" -> .doco-cd.test.yaml
 
 services:
-  gitops-doco-cd:
-    container_name: gitops-doco-cd
+  doco-cd:
+    container_name: doco-cd
     # You can also pin to a specific tag (version)
     # Available tags can be found here: https://github.com/kimdre/doco-cd/pkgs/container/doco-cd
     image: ghcr.io/kimdre/doco-cd:latest
@@ -21,7 +21,7 @@ services:
       - monitoring
     # For all available environment variables and explanations, see https://github.com/kimdre/doco-cd/wiki/App-Settings
     env_file:
-      - /home/mjusteau/docker-compose/gitops/.env
+      - .env
       # WEBHOOK_SECRET: xxx  # Uncomment this line and the webhook port above and set a secure secret if you want to use webhooks.
       # <<: *poll-config  # Uncomment this line to use the poll configuration from above (the `x-poll-config` section).
     volumes:

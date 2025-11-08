@@ -1,4 +1,0 @@
-name: uptimekuma
-working_dir: apps/uptime-kuma/
-compose_files: 
-  - docker-compose.yml
